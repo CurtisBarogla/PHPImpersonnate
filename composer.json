@@ -1,0 +1,35 @@
+{
+	"name" : "ness/ditto",
+	"description" : "Impersonate Component - Ness",
+	"type" : "library",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "CurtisBarogla",
+			"email" : "curtis_barogla@outlook.fr",
+			"role" : "T.B.",
+			"homepage" : "https://github.com/CurtisBarogla"
+		}
+	],
+	"homepage" : "https://github.com/CurtisBarogla/Ditto",
+	"minimum-stability" : "stable",
+	"require" : {
+		"php" : ">= 7.1",
+		"ness/user" : "~2.0"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Ness\\Component\\Ditto\\" : "./src"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"NessTest\\Component\\Ditto\\" : "tests"
+		}
+	},
+	"keywords" : [
+		"security",
+		"user",
+		"impersonation",
+		"assist"
+	]
+}
