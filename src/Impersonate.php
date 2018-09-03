@@ -19,7 +19,7 @@ use Ness\Component\Ditto\Exception\ImpersonateException;
 
 /**
  * Native implementation of ImpersonateInterface.
- * Use a UserStore and a Impersonate store
+ * Use a UserStore and an Impersonate store
  * 
  * @author CurtisBarogla <curtis_barogla@outlook.fr>
  *
@@ -49,7 +49,7 @@ class Impersonate implements ImpersonateInterface
     public const USER_NOT_FOUND = 0;
     
     /**
-     * When a store cannot failed to set a user
+     * When a store failed to set a user
      * 
      * @var int
      */
