@@ -35,7 +35,7 @@ class NativeSessionImpersonateStore implements ImpersonateStoreInterface
      * 
      * @var string
      */
-    public const IMPERSONATE_IDENTIFIER = "NESS_IMPERSONATE";
+    public const IMPERSONATE_IDENTIFIER = "NESS_NATIVE_IMPERSONATE_STORE";
     
     /**
      * Initialize impersonate store
