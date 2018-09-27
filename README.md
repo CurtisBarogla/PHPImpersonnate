@@ -151,7 +151,7 @@ $impersonate->isMorphed(); // will return true
 
 // now that we are morphed into BarUser, we can retrieve our "true" identity via demorph
 $impersonate->demorph();
-$userStore->get(); will return FooUser
+$userStore->get(); // will return FooUser
 
 $impersonate->isMorphed(); // will return false
 
