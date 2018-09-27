@@ -45,6 +45,7 @@ and an ImpersonateStoreInterface implementation.
 For this example to work, session MUST be enabled or a LogicException will be thrown.
 
 ~~~php
+<?php
 $userStore = new UserStorageImplementation();
 $impersonateStore = new NativeSessionImpersonateStore();
 $impersonate = new Impersonate($userStore, $impersonateStore);
@@ -95,6 +96,7 @@ This implementation will basically use the native session mechanism of PHP to st
 Session MUST be active when this storage is constructed or a LogicException will be thrown.
  
 ~~~php
+<?php
 $store = new NativeSessionImpersonateStore();
 $user = new User("Foo");
 
@@ -134,6 +136,7 @@ Trying to demorph if not currently morphed will result a ImpersonateException ; 
 If the user store failed to refresh the current user with the one stored into the impersonate store, a ImpersonateException will be raised too and all user's informations will be lost.
 
 ~~~php
+<?php
 $impersonateStore = new NativeSessionImpersonateStore();
 $userStore = new UserStoreImplementation();
 $impersonate = new Impersonate($userStore, $impersonateStore);
