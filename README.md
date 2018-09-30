@@ -1,6 +1,6 @@
 # Impersonate Component
 
-This library allows you to impersonate a user.
+This library allows you to impersonate a user of your application
 
 0. [How to install](#0-installing-the-component)
 1. [Why ?](#1-why)
@@ -27,7 +27,7 @@ $ composer require ness/user
 
 ## 1. Why ?
 
-Sometimes, it can be useful for debugging or assist reasons to be able to act as a specific user of the application.
+Sometimes, it can be useful for debugging or assist reasons to be able to act as a specific.
 
 This library allows you, via the user library, to impersonate a specific user of your application in the same time persisting your old "user's identity". 
 
@@ -37,8 +37,7 @@ This library consists in a simple interface allowing you to morph, demorph a spe
 
 Let's see a simple use case with the implementation proposed.
 
-This implementation requires a [UserStorageInterface](https://github.com/CurtisBarogla/User#2-storing-user) implementation from the user library 
-and an ImpersonateStoreInterface implementation.
+This implementation requires a [UserStorageInterface](https://github.com/CurtisBarogla/User#2-storing-user) implementation from the user library and an ImpersonateStoreInterface implementation.
 
 **! Important !**
 
@@ -137,7 +136,7 @@ If the user store failed to refresh the current user with the one stored into th
 
 ~~~php
 <?php
-$impersonateStore = new NativeSessionImpersonateStore();
+$impersonateStore = new ImpersonateStoreImplementation();
 $userStore = new UserStoreImplementation();
 $impersonate = new Impersonate($userStore, $impersonateStore);
 
