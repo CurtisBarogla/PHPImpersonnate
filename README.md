@@ -27,7 +27,7 @@ $ composer require ness/user
 
 ## 1. Why ?
 
-Sometimes, it can be useful for debugging or assist reasons to be able to act as a specific.
+Sometimes, it can be useful for debugging or assist reasons to be able to act as a specific user.
 
 This library allows you, via the user library, to impersonate a specific user of your application in the same time persisting your old "user's identity". 
 
