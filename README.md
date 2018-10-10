@@ -5,7 +5,7 @@ This library allows you to impersonate a user of your application
 0. [How to install](#0-installing-the-component)
 1. [Why ?](#1-why)
 2. [How to use](#2-how-to-use)
-3. [Store](#3-store)
+3. [Impersonate Store](#3-impersonate-store)
 4. [Impersonation](#4-impersonation)
 5. [Contributing](#5-contributing)
 6. [License](#6-license)
@@ -70,9 +70,9 @@ $userStore->get(); // will return $currentUser
 $impersonate->isMorphed(); // will return false
 ~~~
 
-## 3. Store
+## 3. Impersonate Store
 
-The store is a simple interface providing you a to store a user who has impersonate another user. 
+The impersonate store is a simple interface providing you a to store a user who has impersonate another user. 
 
 It consists in 3 methods :
 
@@ -110,13 +110,13 @@ $store->delete(); // remove the user from the store
  
 ## 4. Impersonation
 
-ImpersonationInterface allows you to impersonate a user of your application for whatever reasons and restore your old identify after your operation is done on the impersonate user.
+ImpersonationInterface allows you to impersonate a user of your application for whatever reasons and restore your old identity after your operation is done on the impersonate user.
 
 It consists in some basic methods :
 
 Method **morph()** which allows you to morph your current user's identity to another one.
 Method **demorph()** which will restore your old user's identity from a precedent call to morph().
-Method **isMorphed** which will simply check if your current identity is not your real one but one from a mroph call.
+Method **isMorphed** which will simply check if your current identity is from a morph call.
 
 ### 4.1 Implementation
 
@@ -128,11 +128,11 @@ Morphing operations requires a **writable** ImpersonateStore and a **writable** 
 
 Trying to morph into a user with no basic user setted into the UserStore will result a ImpersonateException.
 
-If an error happen during the morphing process, basicaly when the user store failed to refresh the current user with the morphed user or when the impersonate store failed to save the current identity, all current user's informations will be lost and a ImpersonateException will be thrown.
+If an error happen during the morphing process, basicaly when the user store fails to refresh the current user with the morphed user or when the impersonate store fails to save the current identity, all current user's informations will be lost and a ImpersonateException will be thrown.
 
 Trying to demorph if not currently morphed will result a ImpersonateException ; to avoid this we can check if we are currently morphed via **isMorphed()** method.
 
-If the user store failed to refresh the current user with the one stored into the impersonate store, a ImpersonateException will be raised too and all user's informations will be lost.
+If the user store fails to refresh the current user with the one stored into the impersonate store, a ImpersonateException will be raised too and all user's informations will be lost.
 
 ~~~php
 <?php
