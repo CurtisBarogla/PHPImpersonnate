@@ -31,6 +31,8 @@ Sometimes, it can be useful for debugging or assist reasons to be able to act as
 
 This library allows you, via the user library, to impersonate a specific user of your application in the same time persisting your old "user's identity". 
 
+This library is **fully unit tested**.
+
 ## 2. How to use
 
 This library consists in a simple interface allowing you to morph, demorph a specific user.
